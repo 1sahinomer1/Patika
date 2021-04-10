@@ -1,3 +1,3 @@
 ## Purpose of
 
-This repo was created for patika.dev homework assignments.
+This repo was created for patika.dev tasks.
