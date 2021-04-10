@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+.web {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    color: red;
+  }
+  .menu {
+    margin: 1em;
+  }
+  .anasayfa {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+      color: purple;
+    }
+    .musicHeader {
+      color: gold;
+      margin: 1em;
+    }
+    .instruments {
+      margin: 1em;
+    }
+  }
+  .urunler {
+    h2 {
+      color: purple;
+    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .enstrumanlar {
+      ol {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        li {
+          margin: 1em;
+        }
+      }
+    }
+  }
+  .hakkimizda {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h2 {
+      color: purple;
+    }
+    h4 {
+      color: gold;
+    }
+    margin: 1em 3em 0 3em;
+  }
+}
