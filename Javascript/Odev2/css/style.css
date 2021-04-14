@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#f5a338));
+  background-image: linear-gradient(#ffffff, #f5a338);
+}
+
+.container {
+  position: absolute;
+  left: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .header h2 {
+  color: orange;
+  margin-left: 1.5em;
+}
+
+.container .content .form {
+  margin-top: 10em;
+}
+
+.container .content .form input {
+  width: 15em;
+  height: 2em;
+  border-radius: 1em;
+  border: none;
+  outline: none;
+}
+
+.container .content .form button {
+  width: 5em;
+  height: 2em;
+  background-color: orange;
+  border-radius: 20%;
+  color: #ffffff;
+  border: none;
+}
+
+.container .content .todolist ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container .content .todolist ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1em;
+  background-color: #f5a338;
+  text-align: center;
+  font-size: 1em;
+  color: #ffffff;
+}
+
+.container .content .todolist ul li button {
+  width: 5em;
+  height: 2em;
+  background-color: #cc3232;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+/*# sourceMappingURL=style.css.map */
