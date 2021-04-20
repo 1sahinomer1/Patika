@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+$background-color: #f1f5f8;
+$font-color: #ff6a23;
+html,
+body,
+#main {
+  height: 100%;
+  background-color: $background-color;
+  font-family: "Roboto", sans-serif;
+}
+
+#main {
+  .header {
+    text-align: center;
+    color: #ff6a23;
+    font-weight: 800;
+    font-size: 2em;
+    margin: 1em;
+  }
+  .navTags {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    button {
+      margin-right: 1em;
+      font-family: "Roboto", sans-serif;
+      height: 2em;
+      width: 6em;
+      border: 1px solid grey;
+      background-color: $background-color;
+      cursor: pointer;
+      color: $font-color;
+      font-weight: 700;
+      outline: none;
+      &:hover {
+        background-color: #c0c3c5;
+      }
+    }
+  }
+  .foods {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10em;
+    margin-top: 2em;
+    flex-wrap: wrap;
+    .food {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 15em;
+      width: 33%;
+
+      .left {
+        img {
+          height: 10em;
+          width: 10em;
+          border: 0.25rem solid black;
+          border-radius: 1em;
+          margin: 1em;
+        }
+      }
+      .right {
+        hr {
+          max-width: 50%;
+        }
+        h3 {
+          color: $font-color;
+        }
+        p {
+          max-width: 50%;
+        }
+      }
+    }
+  }
+}
