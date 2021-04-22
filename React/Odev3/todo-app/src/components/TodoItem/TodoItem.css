@@ -1,0 +1,18 @@
+.todoItem {
+  display: flex;
+  justify-content: space-between;
+}
+button {
+  color: white;
+  background-color: red;
+  border: none;
+  cursor: pointer;
+}
+
+.line {
+  text-decoration: line-through;
+  color: red;
+}
+.noLine {
+  text-decoration: none;
+}
