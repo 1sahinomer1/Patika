@@ -27,10 +27,7 @@ const Menu = () => {
   };
 
   const handleRemoveIngredient = (ingredient) => {
-    let ingredients = [
-      /* Seçilen malzemeler */
-    ];
-
+    let ingredients = [...selectedIngredients /* Seçilen malzemeler */];
     const existIngredient = ingredients.find(
       (item) => item.name === ingredient.name
     );
