@@ -1,27 +1,31 @@
 import "./App.css";
-import { BrowserRouter as Router, Switch } from "react-router-dom";
-import { routers } from "./config/Router";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { routes } from "../src/config/Routes";
 import { Suspense } from "react";
+import Layout from "./components/Layout";
 
-interface Route {
+interface IRoute {
   path: string;
   exact: boolean;
   component: JSX.Element;
 }
 
 function App() {
+  console.log(routes);
   return (
     <div>
       <Router>
         <Suspense fallback={<h3>Loading...</h3>}></Suspense>
         <Switch>
-          {routers.map((router: Route) => {
-            <Router
-              path={router.path}
-              exact={router.exact}
-              component={router.component}
-            ></Router>;
+          {routes.map((route: IRoute, i: number) => {
+            return (
+              <Route key={i} path={route.path} exact={route.exact}>
+                <Layout>{route.component}</Layout>
+              </Route>
+            );
           })}
+          {/* <Route exact path="/" component={Layout}></Route>
+          <Route path="/result" component={ResultScreen}></Route> */}
         </Switch>
       </Router>
     </div>
