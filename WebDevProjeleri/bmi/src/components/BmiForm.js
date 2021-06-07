@@ -7,7 +7,7 @@ const Form = () => {
     <LayoutContentContainer>
       <h3>Calculate your BMI</h3>
       <CalculateBmi></CalculateBmi>
-      <Result></Result>
+      <Result />
     </LayoutContentContainer>
   );
 };
