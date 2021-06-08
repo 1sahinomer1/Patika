@@ -1,7 +1,10 @@
+import { H3 } from "./Styles/h3";
+
 const ResultScreen = () => {
   return (
     <div>
-      <p>aaaaaaaa</p>
+      <H3>Last Results</H3>
+      
     </div>
   );
 };

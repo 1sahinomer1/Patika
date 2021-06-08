@@ -11,7 +11,6 @@ interface IRoute {
 }
 
 function App() {
-  console.log(routes);
   return (
     <div>
       <Router>

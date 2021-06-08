@@ -1,14 +1,14 @@
 import CalculateBmi from "./CalculateBmi";
 import Result from "./Result";
-import { LayoutContentContainer } from "./Styles/Container.style";
+import { H3 } from "./Styles/h3";
 
 const Form = () => {
   return (
-    <LayoutContentContainer>
-      <h3>Calculate your BMI</h3>
+    <>
+      <H3>Calculate your BMI</H3>
       <CalculateBmi></CalculateBmi>
       <Result />
-    </LayoutContentContainer>
+    </>
   );
 };
 

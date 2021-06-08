@@ -1,31 +1,99 @@
 import { createContext, useState, FC } from "react";
-import { BmiContextState } from "./Types";
+import { BmiContextState, LocalResult } from "./Types";
 
 const contextDefaultValues: BmiContextState = {
   weight: 0,
   height: 0,
-  handleChange() {},
+  open: false,
+  alert: false,
+  handleWeight() {},
+  handleHeight() {},
+  openModal() {},
+  openAlert() {},
+  calculate: (weight, height) => 0,
+  bmi: (bmi) => "",
 };
 
 export const BMIcontext = createContext<BmiContextState>(contextDefaultValues);
 
 const BMIContextProvider: FC = ({ children }) => {
+  let time = new Date();
++
+  const DEFAULT_LOCAL: LocalResult = {
+    result: {
+      date: "",
+      results: [
+        
+      ],
+    },
+  };
+
   const [weight, setWeight] = useState<number | undefined>(
     contextDefaultValues.weight
   );
   const [height, setHeight] = useState<number | undefined>(
     contextDefaultValues.height
   );
-
-  function handleChange(event: any) {
+  const [open, isOpen] = useState<boolean | undefined>(
+    contextDefaultValues.open
+  );
+  const [alert, alertOpen] = useState<boolean | undefined>(
+    contextDefaultValues.alert
+  );
+  function openModal(event: any) {
+    event.preventDefault();
+    if (weight == 0 || height == 0) {
+      alertOpen(true);
+      return;
+    } else {
+      isOpen(!open);
+    }
+  }
+  function openAlert(event: any) {
+    event.preventDefault();
+    alertOpen(false);
+  }
+  function handleHeight(event: any) {
+    let value = event.target.value;
+    setHeight(value);
+  }
+  function handleWeight(event: any) {
     let value = event.target.value;
     setWeight(value);
   }
+  function calculate(weight: number, height: number): number {
+    return weight / ((height / 100) * (height / 100));
+  }
+  function bmi(bmi: number) {
+    if (bmi < 18.5) {
+      return "underweight";
+    } else if (bmi > 18.5 && bmi <= 24.9) {
+      return "normal";
+    } else if (bmi > 25 && bmi < 29.9) {
+      return "overweight";
+    } else {
+      return "obesity";
+    }
+  }
+
   return (
-    <BMIcontext.Provider value={{ weight, height, handleChange }}>
+    <BMIcontext.Provider
+      value={{
+        open,
+        alert,
+        weight,
+        height,
+        handleWeight,
+        handleHeight,
+        openModal,
+        openAlert,
+        calculate,
+        bmi,
+      }}
+    >
       {children}
     </BMIcontext.Provider>
   );
 };
 
-export default BMIcontext;
+export default BMIContextProvider;
