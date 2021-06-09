@@ -4,6 +4,7 @@ import { FiAlertTriangle } from "react-icons/fi";
 import { AiFillCloseCircle } from "react-icons/ai";
 import { BMIcontext } from "../Context/BMIcontext";
 import { IconGroup } from "./Styles/Modal.style";
+import { H4 } from "./Styles/h3";
 const AlertModal = () => {
   const context = useContext(BMIcontext);
 
@@ -21,7 +22,7 @@ const AlertModal = () => {
         ></AiFillCloseCircle>
       </IconGroup>
 
-      <p>İsim yada şifre girmedin ??</p>
+      <H4>İsim yada şifre girmedin ??</H4>
     </ModalContainer>
   );
 };

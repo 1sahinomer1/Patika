@@ -1,5 +1,4 @@
-import React from "react";
-import { A } from "./Styles/A.style";
+import { ATag } from "./Styles/A.style";
 import {
   AiFillGithub,
   AiFillLinkedin,
@@ -12,30 +11,30 @@ const Footer = () => {
   return (
     <FooterContainer>
       <div>
-        <A href="">
+        <ATag href="">
           <GiWeightLiftingDown size={25} />
-        </A>
+        </ATag>
       </div>
 
       <div>
-        <A href="https://github.com/1sahinomer1">
+        <ATag href="https://github.com/1sahinomer1">
           <AiFillGithub size={25} />
-        </A>
-        <A href="https://omersahin.me">
+        </ATag>
+        <ATag href="https://omersahin.me">
           <BiWorld size={25} />
-        </A>
-        <A href="https://www.linkedin.com/in/omersahin1">
+        </ATag>
+        <ATag href="https://www.linkedin.com/in/omersahin1">
           <AiFillLinkedin size={25} />
-        </A>
-        <A href="https://1sahinomer1.medium.com">
+        </ATag>
+        <ATag href="https://1sahinomer1.medium.com">
           <AiFillMediumCircle size={25} />
-        </A>
+        </ATag>
       </div>
 
       <div>
-        <A href="">
+        <ATag href="">
           <GiWeightLiftingUp size={25} />
-        </A>
+        </ATag>
       </div>
     </FooterContainer>
   );

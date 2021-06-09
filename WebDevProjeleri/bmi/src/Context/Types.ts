@@ -1,8 +1,9 @@
 export type BmiContextState = {
-    weight: number | undefined;
-    height:number | undefined;
+    weight: number ;
+    height:number;
     open:boolean|undefined;
     alert:boolean|undefined;
+    resultsTotal:resultState;
     handleWeight(event: React.ChangeEvent<HTMLInputElement>): void;
     handleHeight(event: React.ChangeEvent<HTMLInputElement>): void;
     openModal(event: React.MouseEvent<HTMLButtonElement, MouseEvent>):void;
@@ -11,12 +12,11 @@ export type BmiContextState = {
     bmi:(bmi:number)=>string;
   };
 
-export interface resultsArray {
-  bmi:number;
-  bmiResult:string;
-}
+  export interface BmiState {
+    bmi: number;
+    bmiResult: string
+  }
 
-export type LocalResult = {
-   date:string,
-   results:resultsArray[];
-}
+   export interface resultState {
+     results:BmiState[];
+ }
