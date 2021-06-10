@@ -9,7 +9,7 @@ const ResultScreen = () => {
     <div>
       <H3>Last Results</H3>
       {local.results.map((result) => {
-        return <p>{result.bmi}</p>;
+        return <H3> Your result {result.bmi}</H3>;
       })}
     </div>
   );

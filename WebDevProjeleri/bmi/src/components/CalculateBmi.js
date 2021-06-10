@@ -17,11 +17,16 @@ const CalculateBmi = () => {
           <Input
             placeholder="173cm"
             onChange={(e) => context.handleHeight(e)}
+            required
           />
         </FormGroup>
         <FormGroup>
           <Label htmlFor="">Weight :</Label>
-          <Input placeholder="70kg" onChange={(e) => context.handleWeight(e)} />
+          <Input
+            required
+            placeholder="70kg"
+            onChange={(e) => context.handleWeight(e)}
+          />
         </FormGroup>
 
         <Button onClick={(event) => context.openModal(event)}>Calculate</Button>

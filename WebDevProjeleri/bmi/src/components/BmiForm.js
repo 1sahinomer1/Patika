@@ -1,5 +1,5 @@
 import CalculateBmi from "./CalculateBmi";
-import Result from "./Result";
+
 import { H3 } from "./Styles/h3";
 
 const Form = () => {
@@ -7,7 +7,6 @@ const Form = () => {
     <>
       <H3>Calculate your BMI</H3>
       <CalculateBmi></CalculateBmi>
-      <Result />
     </>
   );
 };

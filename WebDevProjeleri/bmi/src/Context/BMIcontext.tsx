@@ -60,7 +60,7 @@ const BMIContextProvider: FC = ({ children }) => {
     setWeight(value);
   }
   function calculate(weight: number, height: number): number {
-    let score = weight / ((height / 100) * (height / 100));
+    let score = Math.round(weight / ((height / 100) * (height / 100)));
 
     setResult({
       results: [...result.results, { bmi: score, bmiResult: bmi(score) }],

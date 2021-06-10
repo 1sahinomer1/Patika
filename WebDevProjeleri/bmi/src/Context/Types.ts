@@ -14,7 +14,7 @@ export type BmiContextState = {
 
   export interface BmiState {
     bmi: number;
-    bmiResult: string
+    bmiResult: string;
   }
 
    export interface resultState {

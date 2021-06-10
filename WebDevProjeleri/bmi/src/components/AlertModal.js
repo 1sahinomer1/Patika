@@ -22,7 +22,8 @@ const AlertModal = () => {
         ></AiFillCloseCircle>
       </IconGroup>
 
-      <H4>İsim yada şifre girmedin ??</H4>
+      <H4>Please enter your weight and height !</H4>
+      
     </ModalContainer>
   );
 };
