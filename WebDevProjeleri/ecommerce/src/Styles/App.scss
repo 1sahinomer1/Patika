@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+$primaryColor: #55828b;
+$secondaryColor: #c9e4ca;
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: $primaryColor;
+  padding: 15px;
+}
+.homePage {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 50px auto;
+}
+.products {
+  width: 33%;
+  padding: 15px;
+  .product {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 2px solid whitesmoke;
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  .detail {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    .info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      .title {
+        font-weight: 500;
+      }
+      p {
+        font-weight: 300;
+      }
+    }
+    .fav {
+      cursor: pointer;
+      color: $primaryColor;
+      &:hover {
+        color: red;
+      }
+    }
+    .basket {
+      cursor: pointer;
+      color: $primaryColor;
+      &:hover {
+        color: green;
+      }
+    }
+  }
+}
+.favoritesPage {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 50px auto;
+  .favoriteds {
+    padding: 15px;
+    width: 33%;
+    .favorited {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border: 2px solid whitesmoke;
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      .brokeHeart {
+        cursor: pointer;
+        color: #55828b;
+        &:hover {
+          color: brown;
+        }
+      }
+      .basket {
+        cursor: pointer;
+        color: $primaryColor;
+        &:hover {
+          color: green;
+        }
+      }
+      .favoriteDetail {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        .info {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          .title {
+            font-weight: 500;
+          }
+          p {
+            font-weight: 300;
+          }
+        }
+      }
+    }
+  }
+}
