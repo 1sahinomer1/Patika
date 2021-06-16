@@ -4,7 +4,7 @@ import Modal from "./Modal";
 import Product from "./Product";
 
 const Home = () => {
-  const { clothes, openModal, open } = useContext(Context);
+  const { clothes, open } = useContext(Context);
 
   return (
     <>
@@ -12,7 +12,7 @@ const Home = () => {
         <div className="homePage">
           {clothes.map((e) => {
             return (
-              <div className="products" onClick={() => openModal(e)}>
+              <div className="products">
                 <Product product={e}></Product>
               </div>
             );

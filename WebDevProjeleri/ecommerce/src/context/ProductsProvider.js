@@ -22,7 +22,9 @@ const ProductsProvider = ({ children }) => {
   useEffect(() => {
     getClothes();
   }, []);
-
+  // useEffect(() => {
+  //   findBasket();
+  // }, [basket]);
   const addFavorite = (product) => {
     if (favorites.find((e) => e.id === product.id)) {
     } else {
@@ -34,10 +36,36 @@ const ProductsProvider = ({ children }) => {
   };
 
   const addBasket = (product) => {
-    setBasket([...basket, product]);
-    setTotal(total + Number(product.price));
-    console.log(total);
+    if (basket.find((e) => e.id === product.id)) {
+      setTotal(total + Number(product.price));
+    } else {
+      setBasket([...basket, product]);
+      setTotal(total + Number(product.price));
+      console.log(total);
+    }
+    product.count++;
+    console.log(product);
   };
+  const removeBasket = (product) => {
+    if (basket.find((e) => e.id === product.id) && product.count >= 1) {
+      product.count--;
+      setTotal(total - Number(product.price));
+      if (product.count == 0) {
+        setBasket((item) => item.filter((e) => e.id !== product.id));
+      }
+    }
+    console.log(product);
+  };
+  const howMuch = (product) => {
+    return product.count;
+  };
+  // const findBasket = (product) => {
+  //   let temp = 0;
+  //   if (basket.find((e) => e.id === product.id)) {
+  //     temp++;
+  //   }
+  //   return temp;
+  // };
   return (
     <Context.Provider
       value={{
@@ -49,6 +77,10 @@ const ProductsProvider = ({ children }) => {
         openModal,
         selected,
         addBasket,
+        basket,
+        total,
+        removeBasket,
+        howMuch,
       }}
     >
       {children}

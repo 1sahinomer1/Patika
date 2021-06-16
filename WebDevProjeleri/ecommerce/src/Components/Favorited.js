@@ -3,7 +3,7 @@ import { Context } from "../context/ProductsProvider";
 import { FaHeartBroken } from "react-icons/fa";
 import { MdShoppingBasket } from "react-icons/md";
 const Favorited = ({ favorited }) => {
-  const { removeFavorite } = useContext(Context);
+  const { removeFavorite, addBasket } = useContext(Context);
 
   return (
     <div className="favorited">
@@ -23,7 +23,11 @@ const Favorited = ({ favorited }) => {
           <p>{favorited.price} ₺</p>
         </div>
         <>
-          <MdShoppingBasket className="basket" size={30}></MdShoppingBasket>
+          <MdShoppingBasket
+            className="basket"
+            size={30}
+            onClick={() => addBasket(favorited)}
+          ></MdShoppingBasket>
         </>
       </div>
     </div>

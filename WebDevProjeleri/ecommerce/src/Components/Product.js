@@ -3,7 +3,7 @@ import { MdFavorite, MdShoppingBasket } from "react-icons/md";
 import { Context } from "../context/ProductsProvider";
 
 const Product = ({ product }) => {
-  const { addFavorite, addBasket } = useContext(Context);
+  const { addFavorite, addBasket, openModal } = useContext(Context);
 
   const handleFavorite = (product) => {
     addFavorite(product);
@@ -12,7 +12,7 @@ const Product = ({ product }) => {
   return (
     <div className="product">
       <>
-        <img src={product.image} alt="" />
+        <img src={product.image} alt="" onClick={(e) => openModal(product)} />
       </>
       <div className="detail">
         <>
