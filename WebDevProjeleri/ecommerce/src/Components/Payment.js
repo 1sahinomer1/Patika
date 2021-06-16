@@ -8,8 +8,8 @@ const Payment = () => {
     <div>
       {basket && (
         <div className="baskets">
-          {basket.map((clothes) => {
-            return <BasketItem product={clothes}></BasketItem>;
+          {basket.map((clothes, i) => {
+            return <BasketItem key={i} product={clothes}></BasketItem>;
           })}
         </div>
       )}

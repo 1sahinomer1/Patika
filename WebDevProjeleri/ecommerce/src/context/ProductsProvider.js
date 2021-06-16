@@ -50,7 +50,7 @@ const ProductsProvider = ({ children }) => {
     if (basket.find((e) => e.id === product.id) && product.count >= 1) {
       product.count--;
       setTotal(total - Number(product.price));
-      if (product.count == 0) {
+      if (product.count === 0) {
         setBasket((item) => item.filter((e) => e.id !== product.id));
       }
     }
